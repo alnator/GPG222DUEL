@@ -433,7 +433,8 @@ MonoBehaviour:
     NetworkTransport: {fileID: 349649604}
     PlayerPrefab: {fileID: 1269328070425807326, guid: 97e94247708a9014cabd9d7532509ce5, type: 3}
     Prefabs:
-      NetworkPrefabsLists: []
+      NetworkPrefabsLists:
+      - {fileID: 11400000, guid: e31f7fd4b50f347448d4aecc7bff7b56, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -747,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3123346467
+  GlobalObjectIdHash: 1159906771
   InScenePlacedSourceGlobalObjectIdHash: 0
   m_InScenePlacedDisabledByDefault: 0
   DeferredDespawnTick: 0
@@ -917,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5262417396429013012, guid: daf60f1725c6fd549bd039c991334c28, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 2705294298
+      value: 2257933688
       objectReference: {fileID: 0}
     - target: {fileID: 5262417396429013012, guid: daf60f1725c6fd549bd039c991334c28, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
@@ -1111,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3557946927
+  GlobalObjectIdHash: 3736017893
   InScenePlacedSourceGlobalObjectIdHash: 0
   m_InScenePlacedDisabledByDefault: 0
   DeferredDespawnTick: 0
@@ -1156,7 +1157,7 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   objectPrefab: {fileID: 1991183092641633193, guid: daf60f1725c6fd549bd039c991334c28, type: 3}
   count: 10
-  areaSize: {x: 10, y: 10}
+  areaSize: {x: 40, y: 40}
 --- !u!1 &1689440955
 GameObject:
   m_ObjectHideFlags: 0
