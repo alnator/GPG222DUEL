@@ -185,7 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickupObject
   ShowTopMostFoldoutHeaderGroup: 1
   dummyPrefab: {fileID: 2805441569815046808, guid: d8002ff19b491bc4aa7943763ac2ae3a, type: 3}
-  maxThrows: 3
+  maxThrows: 10
+  damage: 10
 --- !u!114 &4083885266868337506
 MonoBehaviour:
   m_ObjectHideFlags: 0
