@@ -72,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 04265e4ae0344014cbb11783acfb43e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -185,7 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickupObject
   ShowTopMostFoldoutHeaderGroup: 1
   dummyPrefab: {fileID: 2805441569815046808, guid: d8002ff19b491bc4aa7943763ac2ae3a, type: 3}
-  maxThrows: 3
+  maxThrows: 10
+  damage: 10
 --- !u!114 &4083885266868337506
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,11 @@ public class PickupObject : NetworkBehaviour
     private Transform holdPoint;
     [SerializeField]private int maxThrows;
     private int amountThrows;
+    // AYUSH DAMAGE START
+    [SerializeField] private int damage = 10;
+    private PlayerHealth thrower;
+    private bool canDamage;
+    // AYUSH DAMAGE END
 
     private void Awake()
     {
@@ -98,10 +103,33 @@ public class PickupObject : NetworkBehaviour
     public void Throw(Vector3 impulse)
     {
         if (!IsServer || !IsSpawned || !isHeld.Value) return;
+        // AYUSH DAMAGE START
+        thrower = holdPoint != null ? holdPoint.GetComponentInParent<PlayerHealth>() : null;
+        canDamage = true;
+        // AYUSH DAMAGE END
         holdPoint = null;
         isHeld.Value = false;
         rb.AddForce(impulse, ForceMode.Impulse);
     }
+
+    // AYUSH DAMAGE START
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!IsServer || !canDamage) return;
+
+        PlayerHealth target = collision.collider.GetComponentInParent<PlayerHealth>();
+        if (target != null && target == thrower) return; // ignore the thrower
+
+        canDamage = false; // only the first thing hit counts
+        if (target != null)
+        {
+            target.TakeDamage(damage);
+            Debug.Log($"Hit {target.name}, health is now {target.Health.Value}");
+        }
+    }
+    // AYUSH DAMAGE END
+
+
     private void DestroyObject()
     {// REWORK, ON 3RD immedeatelly destroys object, have to rework with adding health.cs and collidertrigger
     
