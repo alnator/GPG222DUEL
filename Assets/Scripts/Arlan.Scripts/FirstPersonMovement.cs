@@ -32,6 +32,7 @@ public class FirstPersonMovement : NetworkBehaviour
         bool local = IsClient && IsOwner;
         if (playerCamera != null) playerCamera.enabled = local;
         if (playerAudio != null) playerAudio.enabled = local;
+        if (local) Physics.SyncTransforms();
         if (local) SetCursorLock(true);
     }
 
